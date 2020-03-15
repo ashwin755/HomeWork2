@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REVERSE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-8 col-sm-6"><br>
+            <p><b>ENTER A NUMBER</b></p>
+            <input type="text" id="n1" class="form-control col-6"><br>
+            <button type="button" class="btn btn-success" onclick="rev();">REVERSE</button><br>
+          <b> <br> <p id="reslt" class="col-6 col-sm-8" ></p></b>
+
+        </div>
+    </div>
+    <script>
+        function rev()
+        {
+            var x=parseInt(document.getElementById("n1").value);
+            var y=x;
+            var h=0;
+            while(y>0)
+            {
+                h=(h*10)+(y%10);
+                y=parseInt(y/10);
+            }
+              document.getElementById("reslt").innerHTML="REVERSED NUMBER IS =   "+h;
+            
+        }
+    </script>
+</body>
+</html>
